@@ -1,0 +1,24 @@
+# дан массив с целыми числами.
+# Написать функцию, которая преобразует массив следующим образом:
+# каждое i-е значение массива -это произведение всех значений исходного массива
+# за исключением i-го значения.
+# В решении нельзя использовать операцию деления.
+
+ar_in = []
+print("Кол-во элементов")
+length = int(input())
+
+for el in range(length):
+    print("Введите значение")
+    el = int(input())
+    ar_in.append(el)
+
+ar_out = []
+for _element in ar_in:
+    out = 1
+    for element_ in ar_in:
+        if _element != element_:
+            out = out * element_
+    ar_out.append(out)
+
+print(ar_out)
